@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Papel</string>
+    <string name="set_as_wallpaper">Set</string>
+    <string name="Papel_loading">Papel Loading......</string>
+    <string name="made_with_android_studio_in_java">Made with Android Studio in Java</string>
+    <string name="todo">TODO</string>
+    <string name="search_wallpapers">Search Wallpapers</string>
+</resources>

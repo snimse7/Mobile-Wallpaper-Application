@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".HomeScreenActivity">
+
+    <LinearLayout
+        android:id="@+id/idLL1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/search_back"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:layout_alignParentEnd="true">
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:padding="10dp"
+            android:src="@drawable/image"/>
+
+
+        <!--edit text for displaying edittext-->
+        <EditText
+            android:id="@+id/idEdtSearch"
+            android:layout_width="10dp"
+            android:layout_height="50dp"
+            android:layout_weight="3.5"
+            android:hint="@string/search_wallpapers"
+            android:padding="8dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:backgroundTint="@android:color/transparent" />
+
+        <!--image view for displaying search icon-->
+        <ImageView
+            android:id="@+id/idIVSearch"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:padding="4dp"
+            android:src="@drawable/ic_search" />
+    </LinearLayout>
+
+
+    <!--progress bar for loading indicator-->
+    <ProgressBar
+        android:id="@+id/idPBLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <!--recycler view for displaying categories-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/idRVWallpapers"
+        android:layout_width="match_parent"
+        android:layout_height="900dp"
+        android:layout_below="@id/idLL1"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="130dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/idRVColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/idRVWallpapers"
+        android:layout_marginBottom="-70dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/color_rv_item" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/idRVCategories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/idRVWallpapers"
+        android:layout_marginBottom="-128dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/category_rv_item" />
+</RelativeLayout>

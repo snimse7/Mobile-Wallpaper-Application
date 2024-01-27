@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/idIVIcon"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/image"
+        android:contentDescription="@string/todo" />
+
+
+    <TextView
+        android:id="@+id/idTVHeading2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idIVIcon"
+        android:layout_marginTop="52dp"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/dark_red"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/idTVHeading1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idIVIcon"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/teal"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/idTVHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/idTVHeading1"
+        android:layout_marginTop="90dp"
+        android:fontFamily="@font/adamina"
+        android:gravity="center"
+        android:text="@string/made_with_android_studio_in_java"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

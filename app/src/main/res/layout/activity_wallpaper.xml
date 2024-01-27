@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/idRLWallpaper"
+    android:layout_height="match_parent"
+    tools:context=".WallpaperActivity">
+
+    <!--creating an image view for displaying image-->
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="                                              Pexel Wllpaper"
+        android:textColor="@color/white_smoke"
+        android:background="@color/black_shade_3"
+        app:cardCornerRadius="8dp"
+/>
+
+    <!--creating a button to set the wallpaper-->
+
+    <Button
+
+        android:id="@+id/idBtnSetWallpaper"
+        android:layout_width="148dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="96dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/button_back"
+        android:text="@string/set_as_wallpaper"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/greenYellow" />
+
+    <ProgressBar
+        android:id="@+id/idPBLoading"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>
